@@ -1,4 +1,4 @@
-# 🧭 Traveling Salesman City-Tour Optimizer
+# 🧭 Traveling Salesman City-Travel Optimizer
 
 This project solves a variation of the **Traveling Salesman Problem (TSP)**—a classic algorithmic challenge of finding the shortest possible route that visits a list of cities and returns to the origin. The optimizer implements multiple solving strategies including **Greedy**, **2-opt**, and **Simulated Annealing**, calculates inter-city distances using the **Haversine formula**, and provides both CLI interaction and visualization support.
 
@@ -15,7 +15,7 @@ This project solves a variation of the **Traveling Salesman Problem (TSP)**—a 
   * Simulated Annealing
 * 🗺️ **GeoJSON Export** – Generates `.geojson` file for easy map-based visualization.
 * 💻 **Command-Line Interface (CLI)** – Allows selection of algorithm, start city, and optional limits.
-* 📊 **Matplotlib Plotting** – Visualizes the tour path and city nodes.
+* 📊 **Matplotlib Plotting** – Visualizes the Travel path and city nodes.
 
 ---
 
@@ -39,8 +39,8 @@ This project solves a variation of the **Traveling Salesman Problem (TSP)**—a 
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/rakesh2604/Tour-Optimizer4U.git
-cd Tour-Optimizer4U
+git clone https://github.com/rakesh2604/Travel-Optimizer4U.git
+cd Travel-Optimizer4U
 pip install -r requirements.txt
 ```
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ## 🏠 Project Structure
 
 ```bash
-Tour-Optimizer4U/
+Travel-Optimizer4U/
 │
 ├── tsp.py              # CLI entry point
 ├── tsp_solver.py       # Core TSP algorithms (Greedy, 2-opt, Simulated Annealing)
@@ -90,14 +90,14 @@ python tsp.py --csv places.csv --start "Eiffel Tower" --algo 2opt --limit 50 --s
 
 After execution, you will receive:
 
-* ✔️ A printed city tour in optimal order
+* ✔️ A printed city Travel in optimal order
 * 📏 Total distance in kilometers
 * 🗺️ `route.geojson` file for map visualization
 
 **Sample Output:**
 
 ```
-Optimal tour:
+Optimal Travel:
 1) Eiffel Tower
 2) Place 3
 3) Place 2
@@ -110,13 +110,13 @@ Route written to route.geojson
 
 ## 🌐 GeoJSON Export
 
-The tool generates a `route.geojson` file with the full tour. You can preview it on:
+The tool generates a `route.geojson` file with the full Travel. You can preview it on:
 
 👉 [geojson.io](https://geojson.io/)
 
 1. Open the website
 2. Upload your `route.geojson` file
-3. View your city-tour route instantly
+3. View your city-Travel route instantly
 
 ---
 
@@ -128,7 +128,7 @@ Starts from a city and repeatedly visits the nearest unvisited city. Fast, but n
 
 ### 🔹 2-opt
 
-Improves an initial route by swapping segments to shorten the tour. More accurate, slightly slower.
+Improves an initial route by swapping segments to shorten the Travel. More accurate, slightly slower.
 
 ### 🔹 Simulated Annealing
 
@@ -138,7 +138,7 @@ Explores many possible solutions, accepting worse ones occasionally to avoid loc
 
 ## 🔍 Use Case Example
 
-Run a 2-opt optimized tour starting from **"Place 1"**, limited to 50 cities, and returning to start:
+Run a 2-opt optimized Travel starting from **"Place 1"**, limited to 50 cities, and returning to start:
 
 ```bash
 python tsp.py --csv places.csv --start "Place 1" --limit 50 --algo 2opt --should-return
